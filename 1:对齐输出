@@ -1,0 +1,15 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    int a, b, c;
+    
+    cin >> a >> b >> c;
+    
+    cout << std::right << setw(8) << a << ' ';
+    cout << std::right << setw(8) << b << ' ';
+    cout << std::right << setw(8) << c;
+    cout << endl;
+    return 0;
+}
