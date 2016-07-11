@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    double a, b, c;
+    cin >> a >> b >> c;
+    
+    double m = b * b;
+    double n = 4 * a * c;
+    
+    double x1 = (-b + sqrt(b*b-4*a*c))/(2*a);
+    double x2 = (-b - sqrt(b*b-4*a*c))/(2*a);
+    double s = -b / (2*a);
+    double x = sqrt(4*a*c-b*b) / (2*a);
+    
+    if (fabs(s) < 1e-10) {
+        s = 0;
+    }
+    
+    if (fabs(m - n) < 1e-10) {
+        cout << "x1=x2=" << setprecision(5) << std::fixed << x1 << endl;
+    } else if (m > n){
+        cout << "x1=" << setprecision(5) << std::fixed << x1 << ';' << "x2="  << setprecision(5) << std::fixed << x2 << endl;
+    }else{
+        cout  << "x1="  << setprecision(5) << std::fixed << s << '+'  << setprecision(5) << std::fixed << x << 'i'<< ';' << "x2="  << setprecision(5) << std::fixed << s << '-'  << setprecision(5) << std::fixed << x << 'i' << endl;
+    }
+    
+    return 0;
+}
